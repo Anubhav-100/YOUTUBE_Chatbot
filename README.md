@@ -59,6 +59,7 @@ Response to User             ← Streamlit UI
 
 ## 🛠️ Tech Stack
 
+```
 ┌─────────────────────────────────────────────┐
 │              User Interface                  │
 │           Streamlit / Gradio                 │
@@ -75,6 +76,7 @@ Response to User             ← Streamlit UI
 │             Data Source                      │
 │         youtube-transcript-api               │
 └─────────────────────────────────────────────┘
+```
 
 * YouTube Transcript API
 
