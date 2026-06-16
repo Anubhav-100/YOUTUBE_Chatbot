@@ -28,60 +28,53 @@ The chatbot leverages Large Language Models (LLMs) and RAG architecture to under
 
 ## 🏗️ Architecture
 
-YouTube Video URL
-        │
-        ▼
-Transcript Extraction
-        │
-        ▼
-Text Chunking
-        │
-        ▼
-Embedding Generation
-        │
-        ▼
-Vector Database (ChromaDB)
-        │
-        ▼
+YouTube URL
+    │
+    ▼
+Transcript Extraction        ← youtube-transcript-api (free)
+    │
+    ▼
+Text Chunking                ← LangChain TextSplitter
+    │
+    ▼
+Embedding Generation         ← HuggingFace (free) or Gemini (free tier)
+    │
+    ▼
+Vector Store (ChromaDB)      ← local, free
+    │
+    ▼
 Similarity Search
-        │
-        ▼
+    │
+    ▼
 Retrieved Context
-        │
-        ▼
-Large Language Model
-        │
-        ▼
-Generated Answer
+    │
+    ▼
+LLM Answer Generation        ← Groq (free tier) / Ollama (local, free)
+    │
+    ▼
+Response to User             ← Streamlit UI
 
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-
-* Streamlit
-
-### Backend
-
-* Python
-
-### AI & LLM
-
-* LangChain
-* OpenAI GPT / Gemini
-
-### Vector Database
-
-* ChromaDB
-
-### Embedding Models
-
-* OpenAI Embeddings
-* Gemini Embeddings
-
-### Data Source
+┌─────────────────────────────────────────────┐
+│              User Interface                  │
+│           Streamlit / Gradio                 │
+├─────────────────────────────────────────────┤
+│                Backend                       │
+│              FastAPI (Phase 5)               │
+├──────────────────┬──────────────────────────┤
+│   RAG Pipeline   │      LLM Layer            │
+│   LangChain      │  Groq (free) /            │
+│   ChromaDB       │  Ollama (local, free)     │
+│   sentence-      │                           │
+│   transformers   │                           │
+├──────────────────┴──────────────────────────┤
+│             Data Source                      │
+│         youtube-transcript-api               │
+└─────────────────────────────────────────────┘
 
 * YouTube Transcript API
 
