@@ -28,6 +28,7 @@ The chatbot leverages Large Language Models (LLMs) and RAG architecture to under
 
 ## 🏗️ Architecture
 
+```
 YouTube URL
     │
     ▼
@@ -53,6 +54,7 @@ LLM Answer Generation        ← Groq (free tier) / Ollama (local, free)
     │
     ▼
 Response to User             ← Streamlit UI
+```
 
 
 ---
@@ -61,20 +63,20 @@ Response to User             ← Streamlit UI
 
 ```
 ┌─────────────────────────────────────────────┐
-│              User Interface                  │
-│           Streamlit / Gradio                 │
+│              User Interface                 │
+│           Streamlit / Gradio                │
 ├─────────────────────────────────────────────┤
-│                Backend                       │
-│              FastAPI (Phase 5)               │
+│                Backend                      │
+│              FastAPI (Phase 5)              │
 ├──────────────────┬──────────────────────────┤
-│   RAG Pipeline   │      LLM Layer            │
-│   LangChain      │  Groq (free) /            │
-│   ChromaDB       │  Ollama (local, free)     │
-│   sentence-      │                           │
-│   transformers   │                           │
+│   RAG Pipeline   │      LLM Layer           │
+│   LangChain      │  Groq (free) /           │
+│   ChromaDB       │  Ollama (local, free)    │
+│   sentence-      │                          │
+│   transformers   │                          │
 ├──────────────────┴──────────────────────────┤
-│             Data Source                      │
-│         youtube-transcript-api               │
+│             Data Source                     │
+│         youtube-transcript-api              │
 └─────────────────────────────────────────────┘
 ```
 
