@@ -85,7 +85,7 @@ Response to User             ← Streamlit UI
 ---
 
 ## 📂 Project Structure
-
+```
 youtube-video-chatbot/
 │
 ├── app.py
@@ -103,7 +103,7 @@ youtube-video-chatbot/
 │   └── chatbot.py
 │
 └── README.md
-
+```
 ---
 
 ## 🔄 Workflow
